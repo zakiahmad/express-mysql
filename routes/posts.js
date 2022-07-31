@@ -9,7 +9,7 @@ var connection = require('../library/database');
  */
 router.get('/', function (req, res, next) {
     //query
-    connection.query('SELECT * FROM posts ORDER BY id desc', function (err, rows) {
+    connection.query('SELECT * FROM posts ORDER BY id asc', function (err, rows) {
         if (err) {
             req.flash('error', err);
             res.render('posts', {
@@ -130,7 +130,7 @@ router.get('/edit/(:id)', function(req,res, next){
 router.post('/update/:id', function (req, res, next) {
     
     let id      = req.params.id;
-    let Title   = req.body.title;
+    let title   = req.body.title;
     let content = req.body.content;
     let errors  = false;
 
