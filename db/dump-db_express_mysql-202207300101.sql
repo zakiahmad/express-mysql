@@ -19,10 +19,10 @@
 -- Table structure for table `post`
 --
 
-DROP TABLE IF EXISTS `post`;
+DROP TABLE IF EXISTS `posts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `post` (
+CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `post` (
 -- Dumping data for table `post`
 --
 
-LOCK TABLES `post` WRITE;
+LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
